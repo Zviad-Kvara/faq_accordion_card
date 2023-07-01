@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
-
+/* ABRACADABRA */
 * {
   margin: 0;
   padding: 0;
@@ -26,9 +26,21 @@ main {
   background-repeat: no-repeat;
   background-position: top;
   padding: 0 24px 48px;
+  transition: 0.5s all;
+}
+.accordion-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .mobile-woman-img {
   margin-top: -39%;
+}
+#desktop-woman-img {
+  display: none;
+}
+#box-img {
+  display: none;
 }
 
 .faq-txt {
@@ -60,6 +72,10 @@ main {
   font-size: 13px;
 }
 
+.questions:hover {
+  color: #f47b56;
+}
+
 .question-answer-box {
   border-bottom: 1px solid #e8e8ea;
   padding-bottom: 18px;
@@ -74,3 +90,70 @@ main {
 .active .answer {
   display: block;
 }
+/* ------------------------Desktop Version---------------------- */
+@media screen and (min-width: 1440px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #b068e9 0%, #6463e7 100%);
+    font-family: "Kumbh Sans", sans-serif;
+    min-height: 100vh;
+  }
+  main {
+    flex-direction: row;
+    align-items: center;
+    width: 920px;
+    height: 509px;
+    background-image: url(./images/desktop-bg-pattern.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-position: -556px -314px;
+    padding: 0 0 83px;
+  }
+  .mobile-woman-img {
+    display: none;
+  }
+  #desktop-woman-img {
+    display: block;
+    margin-bottom: 33%;
+  }
+  #box-img {
+    display: block;
+    position: relative;
+    top: 325px;
+    right: 87px;
+  }
+  .accordion-div {
+    margin-left: 88px;
+    align-items: baseline;
+  }
+  .faq-txt {
+    margin-top: 65px;
+  }
+  .question-answer-div {
+    margin-top: 45px;
+  }
+
+  .question:hover {
+    color: #f47b56;
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+  }
+
+  .question {
+    color: #4b4c5f;
+    font-size: 14px;
+  }
+
+  .active .question .questions {
+    font-size: 15px;
+    color: #1e1f36;
+    font-weight: 700;
+  }
+}
+
+/* "Life is a game,for those who plays"---hidden_Angel */
+
